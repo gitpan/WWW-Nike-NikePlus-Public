@@ -1,0 +1,13 @@
+Build.PL
+data/data.xml
+data/error.xml
+lib/WWW/Nike/NikePlus/Public.pm
+MANIFEST			This list of files
+META.yml
+README
+t/00-load.t
+t/critic.t
+t/perlcriticrc
+t/prerequisites.t
+t/WWW/Nike/NikePlus/Public/new.t
+t/WWW/Nike/NikePlus/Public/retrieve.t
