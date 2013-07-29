@@ -2,9 +2,11 @@
 abstract: 'retrieve data from Nike+ public interface'
 author:
   - 'Jonas B. Nielsen, <jonasbn@cpan.org>'
+build_requires: {}
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3607'
+  Module::Build: 0.40
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -13,7 +15,7 @@ name: WWW-Nike-NikePlus-Public
 provides:
   WWW::Nike::NikePlus::Public:
     file: lib/WWW/Nike/NikePlus/Public.pm
-    version: 0.01
+    version: 0.02
 recommends:
   Test::Perl::Critic: 0
   Test::Prereq::Build: 0
@@ -37,4 +39,4 @@ resources:
   homepage: http://logiclab.jira.com/wiki/display/NIKEPUB/Home
   license: http://dev.perl.org/licenses/
   repository: http://logicLAB.jira.com/svn/NIKEPUB
-version: 0.01
+version: 0.02

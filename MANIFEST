@@ -1,4 +1,7 @@
+.swp
+bin/nikeplus.pl
 Build.PL
+Changes
 data/data.xml
 data/error.xml
 lib/WWW/Nike/NikePlus/Public.pm
@@ -11,3 +14,6 @@ t/perlcriticrc
 t/prerequisites.t
 t/WWW/Nike/NikePlus/Public/new.t
 t/WWW/Nike/NikePlus/Public/retrieve.t
+wiki
+Makefile.PL
+META.json

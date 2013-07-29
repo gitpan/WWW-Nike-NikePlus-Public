@@ -1,6 +1,6 @@
 package WWW::Nike::NikePlus::Public;
 
-# $Id: Public.pm 7552 2011-04-08 19:30:33Z jonasbn $
+# $Id: Public.pm 8142 2013-07-29 08:55:37Z jonasbn $
 
 use strict;
 use warnings;
@@ -16,7 +16,7 @@ use constant TRUE => 1;
 my $base_url
     = 'http://nikerunning.nike.com/nikeplus/v1/services/widget/get_public_run_list.jsp';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my ( $class, $param ) = @_;
@@ -113,11 +113,11 @@ WWW::Nike::NikePlus::Public - retrieve data from Nike+ public interface
         userid  => 1755202461,
         verbose => 1,
     });
-    $xml = $nike->retrieve();
+    my $xml = $nike->retrieve();
         
 
     my $nike = WWW::Nike::NikePlus::Public->new({});
-    $xml = $nike->retrieve({
+    my $xml = $nike->retrieve({
         userid => 1755202461,
     });
 
@@ -125,9 +125,17 @@ WWW::Nike::NikePlus::Public - retrieve data from Nike+ public interface
 
 This documentation describes version 0.01
 
+head1 WARNING
+
+This module is dysfuntional, the APIs from Nike are no longer available. The
+new APIs are being evaluated and a major rewrite and release of this distribution
+is planned.
+
+See: L<https://logiclab.jira.com/browse/NIKEPUB#selectedTab=com.atlassian.jira.plugin.system.project%3Aroadmap-panel>
+
 =head1 DESCRIPTION
 
-Nikeplus is a service provided by Nike. It gives you online access to your workout
+NikePlus is a service provided by Nike. It gives you online access to your workout
 data recorded using a Nike+ enabled devices (Apple iPod, iPhone etc.).
 
 The data are returned in XML format. All this module provides is the actual
@@ -149,7 +157,7 @@ the descriptions below on mandatory and optional parameters.
 
 =over
 
-=item * userid, a Nikeplus public id
+=item * userid, a NikePlus public id
 
 =back
 
@@ -178,7 +186,7 @@ Takes no parameters, returns an XML string.
 =head2 processor
 
 This is sort of an abstract method. It should be overwritten, by subclassing the
-class and implmenting your own processor method.
+class and implementing your own processor method.
 
 If you instantiate the object or later set the verbose attribute the built in
 accessor will output the retrieved data to STDERR.
@@ -222,18 +230,19 @@ and access to the Nike site.
 
 =back
 
-Apart from software components, your need a Nikeplus public ID of a user, who
+Apart from software components, your need a NikePlus public ID of a user, who
 have made their workout data publically available. The test suite currently
 uses the ID of the author.
 
-Please use this with descretion, since this is the ID I also use for development
+Please use this with discretion, since this is the ID I also use for development
 and analyzing my own running data. The data are not secret, but I do not want to
 have my account abused, so it will be closed due to overuse or similar, hence
 the mock in the test suite.
 
 =head1 INCOMPATIBILITIES
 
-No known incompatibilities at this time.
+The APIs used in the module are no longer working. Please see the warning
+at the beginning of this documentation and/or the TODO file.
 
 =head1 BUGS AND LIMITATIONS
 
@@ -245,14 +254,20 @@ No known bugs at this time.
 
 =head2 INTEGRATION TEST
 
-If you want to call the actual Nikeplus API, you must enable the integration
+If you want to call the actual NikePlus API, you must enable the integration
 test, this is done using the environment variable.
 
     TEST_INTEGRATION=1 ./Build test
 
 =head1 TODO
 
-Please see distribution TODO file.
+Project road map:
+
+=over
+
+=item *  L<https://logiclab.jira.com/browse/NIKEPUB#selectedTab=com.atlassian.jira.plugin.system.project%3Aroadmap-panel>
+
+=back
 
 =head1 SEE ALSO
 
