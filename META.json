@@ -42,7 +42,7 @@
    "provides" : {
       "WWW::Nike::NikePlus::Public" : {
          "file" : "lib/WWW/Nike/NikePlus/Public.pm",
-         "version" : "0.02"
+         "version" : "0.03"
       }
    },
    "release_status" : "stable",
@@ -61,5 +61,5 @@
       "x_ProjectSite" : "http://logicLAB.jira.com/browse/NIKEPUB",
       "x_ProjectWiki" : "http://logiclab.jira.com/wiki/display/NIKEPUB/Home"
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }

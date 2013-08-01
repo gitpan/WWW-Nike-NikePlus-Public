@@ -15,7 +15,7 @@ name: WWW-Nike-NikePlus-Public
 provides:
   WWW::Nike::NikePlus::Public:
     file: lib/WWW/Nike/NikePlus/Public.pm
-    version: 0.02
+    version: 0.03
 recommends:
   Test::Perl::Critic: 0
   Test::Prereq::Build: 0
@@ -39,4 +39,4 @@ resources:
   homepage: http://logiclab.jira.com/wiki/display/NIKEPUB/Home
   license: http://dev.perl.org/licenses/
   repository: http://logicLAB.jira.com/svn/NIKEPUB
-version: 0.02
+version: 0.03

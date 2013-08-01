@@ -1,6 +1,6 @@
 package WWW::Nike::NikePlus::Public;
 
-# $Id: Public.pm 8142 2013-07-29 08:55:37Z jonasbn $
+# $Id: Public.pm 8179 2013-08-01 13:04:44Z jonasbn $
 
 use strict;
 use warnings;
@@ -16,7 +16,7 @@ use constant TRUE => 1;
 my $base_url
     = 'http://nikerunning.nike.com/nikeplus/v1/services/widget/get_public_run_list.jsp';
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my ( $class, $param ) = @_;
